@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-aiden
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-aiden
+  template:
+    metadata:
+      labels:
+        app: hello-aiden
+    spec:
+      containers:
+        - name: hello-aiden
+          image: aidenhsybob/hello-aiden:latest
+          ports:
+            - containerPort: 3000 # Change if your app uses a different port
