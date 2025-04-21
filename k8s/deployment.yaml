@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: hello
-          image: registry.cn-hongkong.aliyuncs.com/saihu/hello-aiden:1.0.0
+          image: registry.cn-hongkong.aliyuncs.com/saihu/hello-aiden:latest
           ports:
             - containerPort: 3000
