@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-aiden
+  name: hello-app
+  labels:
+    app: hello
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: hello-aiden
+      app: hello
   template:
     metadata:
       labels:
-        app: hello-aiden
+        app: hello
     spec:
       containers:
-        - name: hello-aiden
-          image: aidenhsybob/hello-aiden:latest
+        - name: hello
+          image: registry.cn-hangzhou.aliyuncs.com/saihu/hello:latest
           ports:
-            - containerPort: 3000 # Change if your app uses a different port
+            - containerPort: 3000
