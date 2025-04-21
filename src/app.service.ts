@@ -1,8 +1,15 @@
 import { Injectable } from '@nestjs/common';
+import { Request } from 'express';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
+  getHello(request: Request): string {
+    console.log('getHello called by:', {
+      ip: request.ip,
+      method: request.method,
+      url: request.url,
+      headers: request.headers,
+    });
     return 'Hello World 123!';
   }
 }
