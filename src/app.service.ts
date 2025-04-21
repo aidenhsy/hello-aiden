@@ -4,7 +4,7 @@ import { Request } from 'express';
 @Injectable()
 export class AppService {
   getHello(request: Request): string {
-    console.log('getHello called by:', {
+    console.log('get hello called by:', {
       ip: request.ip,
       method: request.method,
       url: request.url,
